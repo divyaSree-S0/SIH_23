@@ -1,0 +1,71 @@
+<!-- signup.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static "verfiy.css" %}" />
+    <title>Verification</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    {% if messages %}
+        {% for message in messages %}
+            {{ message}}
+        {% endfor %}
+    {% endif %}
+    <form action="{% url 'verification' %}" method="post">
+        {% csrf_token %}
+    <div id="page-content">
+        <div class="login-wrap offset-md-5 mt-5">
+            <div class="login-html">
+                <!-- Keep the radio button and label, but set it as checked -->
+                <input id="tab-2" type="radio" name="tab" class="sign-up" checked>
+                <label for="tab-2" class="tab">VERIFICATION </label>
+                <div class="login-form">
+                    <div class="sign-up-htm">
+                        <!-- ... rest of your Sign Up content ... -->
+                        
+                        <div class="group">
+                            <label for="pass" class="label">Please check your email, the OTP is sent to <b>{{ email}}</b></label></br>
+                            <input id="pass" type="number" name="otp" class="input" data-type="number">
+                        </div>
+                        </br>
+                        
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign Up">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <script>
+        $(otp).change(function(){
+            let otp = $('#otp').val();
+            if (otp == '{{otp}}'){
+                $.ajax({
+                    url: '{% url "verification" %}',
+                    type: 'POST',
+                    data: {
+                        'otp': otp,
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.is_taken) {
+                            alert("OTP is correct");
+                        }
+                        else {
+                            alert("OTP is incorrect");
+                        }
+                    }
+                });
+            }
+           
+        }
+    </script>
+    <script src="Login.js"></script>
+</body>
+</html>

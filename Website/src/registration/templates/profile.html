@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <style>
+        .Heading {
+            color: black;
+            font-style: oblique;
+        }
+
+        .home {
+            font-size: 23px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .SL {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .BL1 {
+            color: wheat;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            border-bottom: 3px solid burlywood;
+            /* Adjust the thickness and color as needed */
+        }
+
+        .size {
+            font-size: 20px;
+            color: black;
+        }
+
+        .custom-container {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .full-name {
+
+            /* Adjust the font size as needed */
+            font-family: Arial, sans-serif;
+            /* Specify your preferred font */
+            text-decoration: underline;
+            display: block;
+            font-weight: bold;
+        }
+
+        .box-shadow {
+            box-shadow: 0px 8px 12px rgba(185, 8, 8, 0.1);
+        }
+
+        .custom-card {
+            background-color: #f8f9fa;
+            /* Light gray background color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Box shadow for a subtle lift */
+            border-radius: 10px;
+            /* Rounded corners for a modern look */
+            overflow: hidden;
+            /* Ensure rounded corners are applied to the content inside */
+        }
+
+        .profile-logo img {
+            width: 50px;
+            /* Adjust the width of the profile logo */
+            height: 50px;
+            /* Adjust the height of the profile logo */
+            border-radius: 50%;
+            /* Make the profile logo circular */
+            margin-bottom: 10px;
+            /* Add some space between the logo and the content */
+        }
+
+        .card-title {
+            color: #007bff;
+            /* Blue title color */
+        }
+
+        .card-link {
+            color: #28a745;
+            /* Green link color */
+        }
+
+        .size2 {
+            font-size: 22px;
+            color: black;
+
+
+            opacity: 50;
+        }
+
+        ul.nav li a:hover {
+            color: orange !important;
+        }
+
+
+
+        .dropdown-menu li a:hover {
+            text-decoration: none;
+            background-color: gainsboro !important;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="footer.css"> -->
+</head>
+
+<body>
+
+    <!-- <script>window.onscroll = function () {
+        if (window.scrollY >= document.documentElement.scrollHeight - window.innerHeight) {
+            document.getElementById("main-footer").style.opacity = 1;
+        } else {
+            document.getElementById("main-footer").style.opacity = 0;
+        }
+    };
+</script> -->
+{% include "Navbar.html" %}
+
+    {% comment %} <div style="background-color: darkblue; height: 20px;"></div>
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 border-bottom bg-body-tertiary">
+      <div class="col-md-3 me-5 mb-2 mb-md-0">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <img src="logo.jpeg" alt="" class="bi" width="300" height="60">
+        </a>
+      </div>
+  
+      <ul class="nav col-14 col-md-auto mb-2 ms-auto justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 link-dark" aria-current="page">Home</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark rgba-blue-light">About Us</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark rgba-blue-light">Real-time Maintenance</a></li>
+      </ul>
+  
+      <div class="col-md-3 text-end">
+        <!-- <button type="button" class="btn btn-outline-secondary rounded-5 me-4 ms-auto">Login/Sign-up</button>
+               <button type="button" class="btn btn-primary"></button>  -->
+      </div>
+  
+      <div class="dropdown text-end">
+        <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle me-4 mt-2"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mb-3" width="35" height="35" fill="currentColor"
+            class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+            <path fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+          </svg>
+        </a>
+        <ul class="dropdown-menu text-small" style="color: white;">
+          <li><a class="dropdown-item" href="#">
+              <label for="Profile" style="color: black;">Profile</label>
+            </a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item mb-2" href="#">
+              <label for="Sign Out" style="color: black;">Sign Out</label>
+            </a></li>
+        </ul>
+      </div>
+  
+    </header> {% endcomment %}
+    <div class="container my-4">
+        <div class="row featurette d-flex justify-content-justify align-items-center mb-5">
+            <div class="col-md-5 order-md-2">
+
+                <h3 class="featurette-heading fw-normal lh-1 full-name">
+
+                    <b>@username_18</b>
+                </h3>
+                <p class="lead">
+                <h5><i>Coal Company</i></h5>
+                </p>
+                <br>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#example1Modal" class="d-grid gap-2 col-md-5 btn btn-primary btn-lg align-item-center">
+                    <h6 class="mt-2">Edit Profile</h6>
+                </button>
+                <!--Modal-->
+                <div class="modal fade" id="example1Modal" tabindex="-1" aria-labelledby="example1ModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-3" style="font-style: oblique;" id="exampleModalLabel">
+                                <b>Edit Email</b></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-dark">
+                            <div class="row">
+                                <div class="col-md-30 border-right">
+                                    <form action="">
+                                        <div class="col-md-20">
+                                            <div>
+                                                <div class="md-form form-group">
+                                                    <label for="name" class="text-white">New Email: </label>
+                                                    <input type="email" id="name" name="new email"
+                                                        class="form-control text-dark mb-1 required" required="name">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-20">
+                                                <div class="md-form form-group">
+                                                    <label for="name" class="text-white">Confirm Email</label>
+                                                    <input type="email" id="name" name="Email-id"
+                                                        class="form-control text-dark mb-1 required">
+
+                                                </div>
+                                            </div>
+                                            </div>
+                                
+                                        <!-- <div class="col-md-12 ">
+                                            <div class="md-form form-group">
+                                                <label for="" class="text-white">Your Message</label>
+                                                <textarea name="message" id="message" cols="50" rows="4"
+                                                    class="form-control md-textarea text-dark required"
+                                                    ></textarea>
+
+                                            </div>
+                                        </div> -->
+
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Change</button>
+                            <!-- <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Send</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-1 order-md-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-3" width="80" height="80" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                </svg>
+            </div>
+            div class="col-md-3 order-md-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-circle box-shadow"
+                     src="https://cdn-icons-png.flaticon.com/512/6659/6659446.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container custom-container ms-5 me-3 mb-5">
+        <div class="col">
+            <div class="card custom-card">
+                <!-- Profile Logo -->
+                <div class="profile-logo" style="background-color: rgb(3,20,83); height: 50px;">
+                    <p class="lead"><b>
+                            <h4 class="ms-3" style="color: white;">Details</h4>
+                        </b></p>
+                </div>
+
+                <div class="card-body">
+                </div>
+
+                <ul class="info-list size2">
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-building-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5M4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5m2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5m2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
+                        </svg><span><b>Name: </b>Rio Toranto</span></li>
+                    <br>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                        </svg><span><b>Location: </b>P9QQ+64R, Burragarh, Jharia, Dhanbad, Jharkhand 828102</span></li>
+                    <br>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
+                            <path
+                                d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z" />
+                        </svg> <span><b>E-mail: </b>shruti@ministry-mine.edu.in</span>
+
+                    </li>
+                </ul>
+
+                <div class="card-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script> -->
+</body>
+
+</html>

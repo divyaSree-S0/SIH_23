@@ -1,0 +1,80 @@
+body, footer {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+footer {
+    background-color: #131C23;
+    padding: 0.05px;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    margin-top: auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+     /* Allow flex items to wrap */
+    margin-right: 20px;
+    color:white;
+    transform: translateY(-45%)
+}
+
+.footer-links a {
+    font-size: 18px;
+    color: #ADB5DB !important; /* Important to override Bootstrap styles */
+    text-decoration: none;
+    
+}
+
+.footer-address {
+    transform: translateX(40%); 
+    /* float:right;Important to override Bootstrap styles */
+    color:white;
+}
+
+.footer-address p {
+    font-size: 18px;
+    color: #ADB5DB !important; /* Important to override Bootstrap styles */
+    font-style: normal;
+    margin: 0; /* Reset default margin */
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 0;
+    color: #FFFFFF;
+    transform: translateY(-30%)
+}
+
+
+@media screen and (max-width: 768px) {
+    footer p {
+        margin-bottom: 15px;
+    }
+
+    footer nav,
+    footer address {
+        margin-bottom: 20px;
+    }
+
+    footer div.row {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        margin-right: 0 !important; /* Important to override Bootstrap styles */
+    }
+
+    .footer-address {
+        align-items: flex-end !important; /* Important to override Bootstrap styles */
+    }
+}
+.footer.footer-h3 {
+    
+    margin: 0 auto;
+    color: #ffffff;
+}

@@ -1,0 +1,58 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'login.css' %}" />
+    <title>Login</title>
+</head>
+<body>
+    {% if messages %}
+    {% for message in messages %}
+        <script>
+            alert("{{ message }}");
+        </script>
+    {% endfor %}
+    {% endif %}
+    <form action="/login/" method="POST"> <!--action="{% url 'home' %}"-->
+    {% csrf_token %} 
+    <div id="page-content">
+        <div class="login-wrap offset-md-5 mt-5">
+            <div class="login-html">
+                <!-- Keep the radio button and label, but set it as checked -->
+                <input id="tab-2" type="radio" name="tab" class="sign-up" checked>
+                <label for="tab-2" class="tab">Sign In</label>
+               
+                  <div class="login-form">
+                        <div class="sign-up-htm">
+                          
+                            <!-- ... rest of your Sign Up content ... -->
+                            <div class="group">
+                                <label for="user" class="label">Username</label>
+                                <input id="user" name="username" type="text" class="input" required>
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Password</label>
+                                <input id="pass" name="password" type="password" class="input" data-type="password"required>
+                            </div>
+                            <div class="group">
+                                <button type="submit" class="button">Login</button>
+                                {% comment %} <input type="submit" class="button" value="Login"> {% endcomment %}
+                            </div>
+                            
+                            <div class="foot-lnk">
+                              <a href="/signup/">Don't have a account? Sign up</a>
+                            </br> </br>
+                                <a href="#forgot">Forgot Password?</a>
+                            </div>
+                          
+                        </div>
+                  </div>
+                {% comment %} </form> {% endcomment %}
+            </div>
+        </div>
+    </div>
+    {% comment %} <script src="{% static "Login.js" %}"></script> {% endcomment %} 
+    </form>
+</body>
+</html>
+
