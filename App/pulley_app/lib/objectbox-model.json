@@ -1,0 +1,73 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:65705359650081969",
+      "lastPropertyId": "4:3841128144600472719",
+      "name": "Users",
+      "properties": [
+        {
+          "id": "1:145609583436460839",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:782273774862532106",
+          "name": "username",
+          "type": 9
+        },
+        {
+          "id": "3:7029917386805630372",
+          "name": "password",
+          "type": 9
+        },
+        {
+          "id": "4:3841128144600472719",
+          "name": "userId",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:3163137537801387397",
+      "lastPropertyId": "3:6281759548489739921",
+      "name": "DamagedPulleys",
+      "properties": [
+        {
+          "id": "1:4373469193906160404",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3518830298498401783",
+          "name": "conveyorId",
+          "type": 9,
+          "flags": 2048,
+          "indexId": "1:5552405501332905349"
+        },
+        {
+          "id": "3:6281759548489739921",
+          "name": "damagedPulleys",
+          "type": 26
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:3163137537801387397",
+  "lastIndexId": "1:5552405501332905349",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
